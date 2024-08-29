@@ -1,9 +1,16 @@
 #include <iostream>
 
-//typedef std::string str; //not wana use fulll name, I'm lazy
-using str = std::string;    //lol just found out how to do it better
+using str = std::string;    
 
 int main() {
+
+    str name;       //variable asigment
+
+    std::cout << "Whats your name:";    //input
+    std::cin >> name;
+
+    std::cout << "Hello " << name << '\n';  //final output
+
 
     return 0;
 }
