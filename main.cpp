@@ -16,6 +16,17 @@ int main() {
     {
         x = rand() %3;
         // add logic
+
+        switch (x)  //lol going to do it in python first beacose idk how
+        {
+        case :
+            /* code */
+            break;
+        
+        default:
+            break;
+        }
+
     } while (input != 'q' || 'Q');
     
 
