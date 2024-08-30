@@ -11,23 +11,29 @@ int main() {
     double twos = 0;
     int x;
     char input;
+    bool doQuit = false;
 
     do
     {
         x = rand() %3;
         // add logic
-
-        switch (x)  //lol going to do it in python first beacose idk how
-        {
-        case :
-            /* code */
-            break;
         
-        default:
-            break;
-        }
 
-    } while (input != 'q' || 'Q');
+        std::cin >> input;
+
+        std::cin.clear();
+        fflush(stdin);
+
+        std::cout << input;
+
+        if (input == 'q' || input == 'Q')
+        {
+            std::cout <<"\nquit\n"
+        }
+        
+
+
+    } while (!doQuit);
     
 
 
