@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <cstdlib>
 
 
@@ -10,34 +11,36 @@ int main() {
     double ones = 0;
     double twos = 0;
     int x;
-    char input;
+    str input;
     bool doQuit = false;
 
-    do
-    {
+            std::cout << "****************rock paper scisors game*****************\n";
+
+    
+    while (!doQuit) {
         x = rand() %3;
-        // add logic
-        
+        // add game       
 
-        std::cin >> input;
+        std::getline(std::cin, input);
 
-        std::cin.clear();
-        fflush(stdin);
-
-        std::cout << input;
-
-        if (input == 'q' || input == 'Q')
+        if (input == "exit")
         {
-            std::cout <<"\nquit\n"
+            doQuit = true;
+            std::cout <<"exiting\n";
+        } else if (input == "help") {
+            std::cout << "rock - plays rock \n";
+            std::cout << "paper - exits the program \n";
+            std::cout << "scissors - exits the program \n";
+            std::cout << "info - shows the score \n";
+            std::cout << "help - shows the list of comands \n";
+            std::cout << "exit - exits the program \n";
+        } else {
+            std::cout << "type \"help\" for the list of commands\n";
         }
         
-
-
-    } while (!doQuit);
+        
+    }
     
-
-
-
 
     return 0;
 }
