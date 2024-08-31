@@ -38,7 +38,7 @@ int main() {
             
 
 
-            std::cout << "rock s- plays rock \n";
+            std::cout << "rock - plays rock \n";
             std::cout << "paper - exits the program \n";
             std::cout << "scissors - exits the program \n";
             std::cout << "info - shows the score \n";
@@ -51,7 +51,7 @@ int main() {
             }
             
 
-            std::cout << "wind:" << wins << '\n';
+            std::cout << "win:" << wins << '\n';
             std::cout << "loses:" << loses << '\n';
             std::cout << "draws:" << draws << '\n';
             std::cout << "rounds played:" << roundsPlayed <<'\n';
