@@ -11,9 +11,9 @@ int main() {
     int x;
     str input;
     bool doQuit = false;
-    int wins = 0;
+    double wins = 0;
     int score = 0;
-    int loses = 0;
+    double loses = 0;
     int draws = 0;
     int roundsPlayed = 0;
     double winRate = 0;
@@ -23,7 +23,7 @@ int main() {
     
     while (!doQuit) {
         x = rand() %3;
-        // add game       
+
 
 
 
@@ -55,7 +55,7 @@ int main() {
             std::cout << "loses:" << loses << '\n';
             std::cout << "draws:" << draws << '\n';
             std::cout << "rounds played:" << roundsPlayed <<'\n';
-            std::cout << "win rate:" << 0/5 << "%\n";
+            std::cout << "win rate:" << winRate << "%\n";
         } else if (input == "rock") {
             if (x == 0){
                 draws++;
