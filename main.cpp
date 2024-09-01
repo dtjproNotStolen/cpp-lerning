@@ -1,10 +1,24 @@
 #include <iostream>
 #include <string>
 
-//typedef std::string str; //not wana use fulll name, I'm lazy
-using str = std::string;    //lol just found out how to do it better
+int arrayIntSerch(int array, int serchedNum, int lenght);
+
+using str = std::string; 
 
 int main() {
 
+    int nums[] = {1,2,3,4,5,6,7,8,9,10};
+
     return 0;
+}
+
+int arrayIntSerch(int array, int serchedNum, int lenght) {
+    for (int i = 0; i < lenght; i++)
+    {
+        if (array[i] == serchedNum) {
+            return i;
+        }
+        
+    }
+    
 }
