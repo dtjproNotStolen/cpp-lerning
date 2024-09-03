@@ -107,7 +107,10 @@ int main() {
             } else {
                 std::cout << "something went wrong";
             }
+        } else {
+            std::cout << "type \"help\" for help\n";
         }
+
         if (input == "rock" || input == "paper" || input == "scissors") {
         roundsPlayed++;
         }
