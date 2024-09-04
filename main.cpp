@@ -2,8 +2,8 @@
 #include <string>
 #include <cstdlib>
 
-
 using str = std::string; 
+
 int main() {
     srand(time(0));
 
@@ -18,6 +18,10 @@ int main() {
     int roundsPlayed = 0;
     double winRate = 0;
 
+    str drawMSG = "You tied.\n";
+    str winMSG = "You won!\n";
+    str loseMSG = "You lost.\n";
+
     std::cout << "****************rock paper scisors game*****************\n";
 
     
@@ -29,10 +33,10 @@ int main() {
 
         std::getline(std::cin, input);
 
-        if (input == "exit")
+        if (input == "exit" || input == "q")
         {
             doQuit = true;
-            std::cout <<"exiting\n";
+            std::cout <<"exiting...\n";
         } else if (input == "help") {
 
             
@@ -47,11 +51,11 @@ int main() {
         } else if (input == "info") {
 
             if (wins + loses != 0){
-                winRate = wins/(wins+loses)*100;
+                winRate = wins/(roundsPlayed)*100;
             }
             
 
-            std::cout << "win:" << wins << '\n';
+            std::cout << "wins:" << wins << '\n';
             std::cout << "loses:" << loses << '\n';
             std::cout << "draws:" << draws << '\n';
             std::cout << "rounds played:" << roundsPlayed <<'\n';
@@ -59,17 +63,17 @@ int main() {
         } else if (input == "rock") {
             if (x == 0){
                 draws++;
-                std::cout << "draw\n";
+                std::cout << drawMSG;
             }else if (x == 1)
             {
                 score--;
                 loses++;
-                std::cout << "lost\n";
+                std::cout << loseMSG;
             } else if (x == 2)
             {
                 score++;
                 wins++;
-                std::cout << "won\n";
+                std::cout << winMSG;
             } else {
                 std::cout << "something went wrong";
             } 
@@ -77,16 +81,16 @@ int main() {
             if (x == 0){
                 wins++;
                 score++;
-                std::cout << "won\n";
+                std::cout << winMSG;
             }else if (x == 1)
             {
                 draws++;
-                std::cout << "draw\n";
+                std::cout << drawMSG;
             } else if (x == 2)
             {
                 score--;
                 loses++;
-                std::cout << "lost\n";
+                std::cout << loseMSG;
             } else {
                 std::cout << "something went wrong";
             }
@@ -94,16 +98,16 @@ int main() {
             if (x == 0){
                 loses++;
                 score--;
-                std::cout << "lose\n";
+                std::cout << loseMSG;
             }else if (x == 1)
             {
                 score++;
                 wins++;
-                std::cout << "won\n";
+                std::cout << winMSG;
             } else if (x == 2)
             {
                 draws++;
-                std::cout << "tie\n";
+                std::cout << drawMSG;
             } else {
                 std::cout << "something went wrong";
             }
